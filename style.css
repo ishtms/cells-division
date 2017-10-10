@@ -1,0 +1,81 @@
+body{
+    background: linear-gradient(to right bottom, #2d0104 20%, #771719 90%) no-repeat;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden
+}
+.cells-container{
+    will-change: filter;
+    filter: url("#gooey");
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.cell{
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    border-radius: inset 5px 5px 10px 1px #000;
+}
+.cell-2{
+    width: 75px;
+    height: 60px;
+}
+.cell-1{
+    z-index: 2;
+}
+.cell .cell-inner{
+    border-radius: 50%;
+    background: #d57572;
+    width: 100%;
+    height: 100%;
+}
+.cell1 .cell-inner{
+    box-shadow: 0 0 37px -11px #ffc9c9, 0 0 10px -31px rgb(185,24, 69), inset 0 5px 12px -1px #d57573, inset 11px -6px 37px 37px #6f1211;
+    animation: wiggle 5s linear alternate both 1;
+}
+.cell-2 .cell-inner{
+    box-shadow: 5px -5px 16px 11px #ffc9c9, 0 0 10px -31px rgb(185,224, 69), inset 0 5px 12px -1px #d57573, inset 11px -6px 37px #6f1211;
+    animation-delay: 2.5s;
+}
+.cell-2{
+    left: 42%;
+    top: 25%;
+    animation: cell-divide 13s 3.2s ease-out 1 forwards;
+}
+
+@keyframes cell-divide{
+    70%{
+        transform: translate(200px, 50px);
+    }
+    100%{
+        transform: translate(200px, -100px)
+    }
+}
+@keyframes wiggle{
+    25%, 75%{
+        width: 120px;
+        height: 100px;
+    }
+    50%, 100%{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
